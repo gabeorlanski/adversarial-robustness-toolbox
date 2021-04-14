@@ -157,7 +157,7 @@ def roughnessRegularization(delta: torch.Tensor, T: int) -> torch.Tensor:
 def testingMain():
     torch.manual_seed(1999)
     X = torch.rand(4, 3, 3, 3, requires_grad=True)
-
+    q = torch.ones(1, 1, 1, 3)
     # Sanity check
     assert X.shape == torch.Size([4, 3, 3, 3])
 
