@@ -100,6 +100,16 @@ def adversarialLoss(predictions: torch.Tensor, labels: torch.Tensor, m: float) -
     :param m:
     :return:
     """
+
+    # output: 1 dimensional tensor single float
+    # predictions cannot have .gradient attribute == none
+    # call .backwards() make sure no errors thrown
+    # check predictions.grad != none
+    # call torch.norm() != 0
+
+    # assert hasattr(obj, "backwards") = TRUE
+    # assert callable(obj.backwards) = TRUE
+
     # Number of samples x Number of Labels
     samples, n = predictions.shape
     pred_mask = torch.ones(samples, n).type(torch.bool)
@@ -163,8 +173,6 @@ def testingMain():
 
     dX = firstTemporalDerivative(X)
     d2X = secondTemporalDerivative(X)
-
-    print(firstTemporalDerivative(torch.Tensor([1, 0, 0, 0])))
 
     # Sanity check part 100000000
     assert dX.shape == torch.Size([4, 3, 3, 3])
