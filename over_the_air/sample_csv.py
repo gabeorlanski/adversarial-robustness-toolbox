@@ -7,23 +7,46 @@
 import pandas as pd
 import random
 import csv
+import argparse
+from typing import List
+
+
+def getSamplesWithLabels(all_samples: pd.DataFrame,
+                         class_id: List,
+                         skip_ids: List = None):
+    skip_ids = skip_ids or []
+    out = []
+    for _, r in all_samples[all_samples.label.isin(class_id)].iterrows():
+        if r['youtube_id'] in skip_ids:
+            continue
+        out.append(r.values.tolist())
+
+    return out
+
 
 if __name__ == "__main__":
-    #print(pd.read_csv("test.csv")["label"].unique())
-    #all_test_labels = pd.read_csv("test.csv")["label"].unique()
-    
+    seed = 1995
+    random.seed(seed)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--skip', help='Comma Separated List of invalid ids to skip', default='')
+    args = parser.parse_args()
+    invalid_ids = args.skip.split(',')
+
+    # print(pd.read_csv("test.csv")["label"].unique())
+    # all_test_labels = pd.read_csv("test.csv")["label"].unique()
+
     # Read the 3 csv files    
     train = pd.read_csv("train.csv")
-    validate = pd.read_csv("validate.csv")    
+    validate = pd.read_csv("validate.csv")
     test = pd.read_csv("test.csv")
 
     # Sample 10 labels (hard-coded for now)
-    sample_test_labels = ['extinguishing fire', 'bartending', 'ironing', 
-                          'triple jump', 'playing drums', 'arm wrestling', 
+    sample_test_labels = ['extinguishing fire', 'bartending', 'ironing',
+                          'triple jump', 'playing drums', 'arm wrestling',
                           'planting trees', 'juggling balls', 'shooting goal (soccer)', 'high jump']
-    #sample_test_labels = random.sample(set(all_test_labels), 10)
-    #print(sample_test_labels)    
-    
+    # sample_test_labels = random.sample(set(all_test_labels), 10)
+    # print(sample_test_labels)
+
     # NOTE: In the CSV file, the labels are replaced with numbers from 0-9
     # corresponding to the 10 labels that we chose above.
     # 1: extinguishing fire
@@ -36,55 +59,39 @@ if __name__ == "__main__":
     # 8: juggling balls
     # 9: shooting goal (soccer)
     # 10: high jump
-    
+
     # CSV file name
-    filename = 'sampled_urls.csv'    
-    
+    filename = 'sampled_urls.csv'
+
     # Open the CSV file for writing
-    with open(filename, 'w', newline = '') as csvfile:
+    with open(filename, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
-        
+
         # Write the CSV field names
         fields = train.columns
         csvwriter.writerow(fields)
 
-        # Iterate through each label, and pick links (youtube ID's)
-        for i in range(len(sample_test_labels)):
-            sample_id = sample_test_labels[i]
-            train_ids = []
-            validate_ids = []
-            test_ids = []
-            
-            # Filter links that match the label for each file (train, validate, test)
-            for j in range(len(train.label)):
-                if train.label[j] == sample_id:
-                    train_ids.append(train.iloc[j].values.tolist())
-            for j in range(len(validate.label)):
-                if validate.label[j] == sample_id:
-                    validate_ids.append(validate.iloc[j].values.tolist())
-            for j in range(len(test.label)):
-                if test.label[j] == sample_id:
-                    test_ids.append(test.iloc[j].values.tolist())
-            
-            # Choose 6 for train, 3 for validate, 3 for test
-            train_sample_ids = random.sample(range(len(train_ids)), 6)
-            validate_sample_ids = random.sample(range(len(validate_ids)), 3)
-            test_sample_ids = random.sample(range(len(test_ids)), 3)
-    
-            
-            # Add data rows to the CSV file for this label
-            # Note: this section used to append the label as a string, not a number
-            for k in train_sample_ids:
-                # csvwriter.writerow([train_sample_ids[k], sample_id])
-                csvwriter.writerow(train_ids[k])
-            for k in validate_sample_ids:
-                # csvwriter.writerow([validate_sample_ids[k], sample_id])
-                csvwriter.writerow(validate_ids[k])
-            for k in test_sample_ids:
-                # csvwriter.writerow([test_sample_ids[k], sample_id])
-                csvwriter.writerow(test_ids[k])
-        
+        # Filter links that match the label for each file (train, validate, test)
+        train_ids = getSamplesWithLabels(train, sample_test_labels, invalid_ids)
+        validate_ids = getSamplesWithLabels(validate, sample_test_labels, invalid_ids)
+        test_ids = getSamplesWithLabels(test, sample_test_labels, invalid_ids)
+        # Choose 4 for train, 2 for validate, 2 for test
+        train_sample_ids = random.sample(range(len(train_ids)), 4 * len(sample_test_labels))
+        validate_sample_ids = random.sample(range(len(validate_ids)), 2 * len(sample_test_labels))
+        test_sample_ids = random.sample(range(len(test_ids)), 2 * len(sample_test_labels))
+
+        # Add data rows to the CSV file for this label
+        # Note: this section used to append the label as a string, not a number
+        for k in train_sample_ids:
+            # csvwriter.writerow([train_sample_ids[k], sample_id])
+            csvwriter.writerow(train_ids[k])
+        for k in validate_sample_ids:
+            # csvwriter.writerow([validate_sample_ids[k], sample_id])
+            csvwriter.writerow(validate_ids[k])
+        for k in test_sample_ids:
+            # csvwriter.writerow([test_sample_ids[k], sample_id])
+            csvwriter.writerow(test_ids[k])
+
         # Let the user know when the program is finished running (since it takes
         # a bit of time to write the csv)
         print("CSV is complete.")
-            
