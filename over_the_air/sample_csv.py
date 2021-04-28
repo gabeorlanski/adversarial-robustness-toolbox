@@ -45,7 +45,7 @@ if __name__ == "__main__":
         csvwriter = csv.writer(csvfile)
         
         # Write the CSV field names
-        fields = ['URL', 'label']
+        fields = train.columns
         csvwriter.writerow(fields)
 
         # Iterate through each label, and pick links (youtube ID's)
@@ -58,31 +58,31 @@ if __name__ == "__main__":
             # Filter links that match the label for each file (train, validate, test)
             for j in range(len(train.label)):
                 if train.label[j] == sample_id:
-                    train_ids.append(train.youtube_id[j])
+                    train_ids.append(train.iloc[j].values.tolist())
             for j in range(len(validate.label)):
                 if validate.label[j] == sample_id:
-                    validate_ids.append(validate.youtube_id[j])
+                    validate_ids.append(validate.iloc[j].values.tolist())
             for j in range(len(test.label)):
                 if test.label[j] == sample_id:
-                    test_ids.append(test.youtube_id[j])
+                    test_ids.append(test.iloc[j].values.tolist())
             
             # Choose 6 for train, 3 for validate, 3 for test
-            train_sample_ids = random.sample(set(train_ids), 6)
-            validate_sample_ids = random.sample(set(validate_ids), 3)
-            test_sample_ids = random.sample(set(test_ids), 3)
+            train_sample_ids = random.sample(range(len(train_ids)), 6)
+            validate_sample_ids = random.sample(range(len(validate_ids)), 3)
+            test_sample_ids = random.sample(range(len(test_ids)), 3)
     
             
             # Add data rows to the CSV file for this label
             # Note: this section used to append the label as a string, not a number
-            for k in range(len(train_sample_ids)):
+            for k in train_sample_ids:
                 # csvwriter.writerow([train_sample_ids[k], sample_id])
-                csvwriter.writerow([train_sample_ids[k], i])
-            for k in range(len(validate_sample_ids)):
+                csvwriter.writerow(train_ids[k])
+            for k in validate_sample_ids:
                 # csvwriter.writerow([validate_sample_ids[k], sample_id])
-                csvwriter.writerow([validate_sample_ids[k], i])
-            for k in range(len(test_sample_ids)):
+                csvwriter.writerow(validate_ids[k])
+            for k in test_sample_ids:
                 # csvwriter.writerow([test_sample_ids[k], sample_id])
-                csvwriter.writerow([test_sample_ids[k], i])
+                csvwriter.writerow(test_ids[k])
         
         # Let the user know when the program is finished running (since it takes
         # a bit of time to write the csv)

@@ -1,121 +1,121 @@
-URL,label
-xJDTBNq2Ol8,0
-dGI0Zs5s2SA,0
-TqWSE3cJpNA,0
-iO5aX-F4p-4,0
-90-k0YeKqVU,0
-0WHzA-7kBnA,0
-Lzs27USI7Es,0
-eVnjP8DMzQ0,0
-NXMb-rPW1sc,0
-H_qbIZpjH1Y,0
-1HYyqWrcyvw,0
-2f99TtjfSKc,0
-Kc_sy56cp4w,1
-EKgsXyWlHpQ,1
--RLhbQpFa1s,1
-s0wSeo3vrfw,1
-bk8nsW60teg,1
-Zzs7shpMiYA,1
-D6B1qRNgTmE,1
-MjBWljbRcxg,1
-cQkcKw4Ew-k,1
-HyPY5lidTaw,1
-uAXefGLiMA4,1
-8qFvcrudRlo,1
-FwBsGGCO4-k,2
-jVbXgaI51dc,2
-58AFS7bUS9Q,2
-4vJpk_aBwWc,2
-HQJt-dPn2sc,2
-zoS18xQDqOE,2
-95b-D4ZQMT8,2
-N0FPlU0DFhg,2
-Ui06uqNqVl8,2
-Wp5uIu2veN8,2
-D7vWTTfCFJ4,2
-uH4s29v02Kw,2
-vVTYTWudNjU,3
-nFmi8sB0se0,3
-AncuJPCBEdY,3
-VsQPfb2lZbw,3
-8qWrfirDq7k,3
-mZM_pnYnP5M,3
-SYLjcl3aYcg,3
-yJ30CxUr0iU,3
-dxbshKHoP3Q,3
-EOgE_mLe7ks,3
-Vl3hjmdxj90,3
-g27AhXfioUU,3
-8GwTk7a9mhc,4
-wlsu1OdwtIU,4
-uO0uPf8mCEc,4
-iXgexDqKR8Y,4
-ZcxtAypmhAE,4
-P83REbI3xkg,4
-d8__H5d2sd4,4
-VIeRDum9wVo,4
-g_bE1BACx1c,4
-bU4GB3DxcBU,4
-MSzOtRZfap4,4
-gKRoLKsRsA4,4
-bTdOQM-OK-k,5
-PJhJRHXmbuk,5
-GffZOVLmJS0,5
-GPgBv-hlvIY,5
-Jzx88h4hKCw,5
-esRsq6UkYHE,5
-kIR7uN31YWg,5
-ocAiWoqVKLc,5
-85BHQBF-f9s,5
-KsB3DAfAiX4,5
-kF7UwgnrUgc,5
-BRVskCdeV3Y,5
-zzcG0kI_Wq8,6
-SoTaWfvmadM,6
-Jhz0I5Pj_EQ,6
-cACj3DyOJDw,6
--AgVzpylocM,6
-KhqlkKSrSJM,6
-jTMLmL5LJ7Q,6
-Mt1HKgfSEQE,6
-i8zHxGXQzok,6
-EbhK4eI1iYc,6
-LFj3O4BkCoc,6
-6tmYP2JRNHU,6
-VibEoI77Jq8,7
-1oucU1rJvQU,7
-qCp7pfVYLEY,7
-rIZZcNL5LPA,7
-zDGul5IUyME,7
-Ec48qiXUlnw,7
-ufND1hxYBCo,7
-uz8NGRHEHKg,7
-SxW8hYW0FnA,7
-NSGn-cgdiX8,7
-3NmFLC1tfjA,7
-JlE5wNqya0E,7
-vIcde7jUxoU,8
-3Lz6iS7WDT0,8
-DqdB4coea5Q,8
-n33yxKXhXFM,8
-qHU6J1Bd_FU,8
-nTt8M16D-o8,8
-1anZ-z6XnlU,8
-BYiyq0pD6M0,8
-vPUFfffOxRM,8
-euTihoZSMi0,8
-8WIMka9qqP0,8
-YuMxrf-POpU,8
-KnEGdcmydm0,9
-SGEJSKbtXAs,9
-RuYZZK-gXWs,9
-ZqPN5WXdJrM,9
-LMZJom8luCo,9
-KYtlOQDN2z4,9
-01fAWEHzudA,9
-wF8MfJyliy0,9
-xCSMR3XgyjE,9
-rcVmzAH8_Ss,9
-mOtFyFGomKM,9
-xrH6eEQhzgg,9
+label,youtube_id,time_start,time_end,split
+extinguishing fire,iO5aX-F4p-4,10,20,train
+extinguishing fire,qd57LMsIbuM,2,12,train
+extinguishing fire,AG37ivEungg,349,359,train
+extinguishing fire,cWGq5y_rcrc,0,10,train
+extinguishing fire,Edqxd5iJnGc,2,12,train
+extinguishing fire,VVwHmACIyQY,58,68,train
+extinguishing fire,Ms2iNKIsaXU,50,60,validate
+extinguishing fire,DcEuTSu6EEA,255,265,validate
+extinguishing fire,N5mQkA04ILI,6,16,validate
+extinguishing fire,ixK0vPPtCfw,0,10,test
+extinguishing fire,ZYyPmTSHe4k,2,12,test
+extinguishing fire,MTnEXWJCmkU,52,62,test
+bartending,tPTlpmx8U9o,72,82,train
+bartending,GMbPJNkwxLs,138,148,train
+bartending,hh6du-oR6ws,53,63,train
+bartending,lp6d4_gcDwU,76,86,train
+bartending,CgKPdaZVYO0,391,401,train
+bartending,o8iCCryOTbo,81,91,train
+bartending,wfU8bVCvwus,46,56,validate
+bartending,Bedt6pQucJ0,21,31,validate
+bartending,OG1IRQyhgs8,457,467,validate
+bartending,mwEzYi4fQlE,71,81,test
+bartending,PBYh06WqFAY,41,51,test
+bartending,BTOAaUHCp8M,144,154,test
+ironing,QCYL4EpUf34,324,334,train
+ironing,1sCZZv7WQuM,62,72,train
+ironing,9VteqbFqeyg,168,178,train
+ironing,Fnezs14cxP8,115,125,train
+ironing,hkLencxzhcE,15,25,train
+ironing,P8XrGcVnWig,64,74,train
+ironing,QlheJahkSpA,58,68,validate
+ironing,xtXI1J8DAh0,194,204,validate
+ironing,xPS_2CCgxuE,384,394,validate
+ironing,zW6Eq2hxsNQ,1,11,test
+ironing,-DjD3DMxX9Q,283,293,test
+ironing,hX1dmaeDVgY,74,84,test
+triple jump,eqoHTviaitQ,5,15,train
+triple jump,bvyoG4MBwkQ,1,11,train
+triple jump,TwbOVQtjNpE,4,14,train
+triple jump,SxY_oq3GvhM,17,27,train
+triple jump,wCRLXVlHco0,0,10,train
+triple jump,KGDuNn9W2O8,155,165,train
+triple jump,ezPtrxQY8ls,3,13,validate
+triple jump,6lFJFZt_H0c,62,72,validate
+triple jump,PquqWVEmOag,10,20,validate
+triple jump,ML_4hQvRyVo,54,64,test
+triple jump,K_Td9sLp8HI,3,13,test
+triple jump,m7WcbQ2PLWE,10,20,test
+playing drums,6Y915mFaEJk,297,307,train
+playing drums,bSRi3KyaPAA,4,14,train
+playing drums,_E_zz3ryPsI,0,10,train
+playing drums,5_MfZfOFJ5E,202,212,train
+playing drums,4QzsmwrXE9Q,305,315,train
+playing drums,Rgc1M8dRl0Y,243,253,train
+playing drums,VIeRDum9wVo,0,10,validate
+playing drums,hJXBf1fs8rM,14,24,validate
+playing drums,m0R5rkIi6VM,77,87,validate
+playing drums,ctxd5SuoeOA,74,84,test
+playing drums,gixER1-iNyg,319,329,test
+playing drums,VM8ChnXci_w,43,53,test
+arm wrestling,u6giM0p_Etc,103,113,train
+arm wrestling,f62n_vHP1sw,39,49,train
+arm wrestling,j4A8CQ6lYrU,108,118,train
+arm wrestling,nOFmuov1wAw,16,26,train
+arm wrestling,r0-gZO92Tt8,27,37,train
+arm wrestling,1LVPrDeE8R8,2,12,train
+arm wrestling,kIR7uN31YWg,16,26,validate
+arm wrestling,r07lpVArk8Y,266,276,validate
+arm wrestling,ehLnj7pXnYE,27,37,validate
+arm wrestling,c53ik9iiugU,2,12,test
+arm wrestling,LpObjLrUWs4,15,25,test
+arm wrestling,9YCp3tBiA6U,14,24,test
+planting trees,UV1joekpZfY,81,91,train
+planting trees,NEDdYNmZF5M,90,100,train
+planting trees,zzcG0kI_Wq8,277,287,train
+planting trees,hEGEnZwfaRE,18,28,train
+planting trees,9BJ24P8dfLo,3,13,train
+planting trees,t1h19eIVnvo,81,91,train
+planting trees,T2FU1QWCb8U,170,180,validate
+planting trees,v2FaLi04hdI,14,24,validate
+planting trees,Yh94s3ux29k,60,70,validate
+planting trees,DoIhShN4G9c,29,39,test
+planting trees,SkfOkEPEK8I,37,47,test
+planting trees,LarTpSWRXlQ,82,92,test
+juggling balls,kZq67NlK4oU,73,83,train
+juggling balls,eWtBZbL9eFY,13,23,train
+juggling balls,W8YnzFnKbj8,0,10,train
+juggling balls,18-XCQQdAn0,4,14,train
+juggling balls,xHaiBoTqQy8,3,13,train
+juggling balls,UjdLhD9V20s,91,101,train
+juggling balls,H1HLH6V2bU4,35,45,validate
+juggling balls,xtSBE8LFhXY,29,39,validate
+juggling balls,LAGloUVomrw,17,27,validate
+juggling balls,ab8LABL_A9M,55,65,test
+juggling balls,c6nTrftShSw,91,101,test
+juggling balls,FlrVX6zCr6k,12,22,test
+shooting goal (soccer),jIMbxalsHE4,40,50,train
+shooting goal (soccer),ZAlml9KSkgY,190,200,train
+shooting goal (soccer),RVjgGotfbxM,3,13,train
+shooting goal (soccer),3PA9Mvg5g8Q,499,509,train
+shooting goal (soccer),ryysqwH7Zto,174,184,train
+shooting goal (soccer),tKmLG0huqDQ,279,289,train
+shooting goal (soccer),BYiyq0pD6M0,12,22,validate
+shooting goal (soccer),eXjFnOzjEtI,1,11,validate
+shooting goal (soccer),ezJdtQzJ7qI,21,31,validate
+shooting goal (soccer),RE1EKKqfJZE,16,26,test
+shooting goal (soccer),d_ArBAGSMIc,333,343,test
+shooting goal (soccer),kTSvqiGMbUg,31,41,test
+high jump,5wigzM1WhFo,177,187,train
+high jump,k1-wvfRkGS8,11,21,train
+high jump,e-F3tAYm_3Y,4,14,train
+high jump,wmi5BDkglrU,2,12,train
+high jump,g2BjHpB-axo,16,26,train
+high jump,5GDNlW8Ogc4,0,10,train
+high jump,H8E0a2WVJHw,10,20,validate
+high jump,ooHbJ-c0r4g,4,14,validate
+high jump,oS5lChx2xkQ,3,13,validate
+high jump,fEX4cBubMaI,1,11,test
+high jump,zL0L9Faa5CA,32,42,test
+high jump,617r0uHCc6c,0,10,test

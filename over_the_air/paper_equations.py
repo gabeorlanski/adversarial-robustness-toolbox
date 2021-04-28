@@ -120,7 +120,7 @@ def adversarialLoss(predictions: torch.Tensor, labels: torch.Tensor, m: float) -
     )
 
     # Equation 3
-    return torch.max(torch.zeros(labels.shape).to(predictions.device),
+    return torch.max(torch.zeros(1).to(predictions.device),
                      torch.min(1 / m * torch.pow(l_m, 2), l_m))
 
 
