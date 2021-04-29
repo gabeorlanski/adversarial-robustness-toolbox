@@ -1,8 +1,11 @@
 import pytest
 import torch
+# Need random seed for Objective Func
 import random
+# Need numpy arrays to check values inside torch tensors
 import numpy
 
+# import all functions that need to be tested
 from over_the_air.paper_equations import (firstTemporalDerivative, secondTemporalDerivative, objectiveFunc, adversarialLoss,
     thicknessRegularization, roughnessRegularization)
 
@@ -45,6 +48,8 @@ class TestRegularization:
         assert thicknessRegularization(self.OnesInput, 1).size() == torch.Size([])
         assert thicknessRegularization(self.ZeroesInput, 1).size() == torch.Size([])
         # Output Check
+        # Float Precision Error
+        # This was the quick fix
         assert 35.99999 < thicknessRegularization(self.OnesInput, 1).item() < 36.0000
         assert thicknessRegularization(self.ZeroesInput, 1).item() == 0.0
 
