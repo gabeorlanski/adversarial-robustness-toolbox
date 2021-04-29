@@ -56,8 +56,6 @@ class TestRegularization:
         assert roughnessRegularization(self.ZeroesInput, 1).item() == 0.0
         assert roughnessRegularization(self.OnesInput, 1).item() == 144.0
 
-
-
 # $ pytest -k TestAdversarialLoss
 
 class TestAdversarialLoss:
@@ -93,7 +91,7 @@ class TestObjectiveFunc:
     def test_objectiveFunc(self):
         loss = objectiveFunc(self.predictions, self.labels, self.X, 0.1, 1, 1, 0.5)
 
-        print("Loss: %20.15f" % loss.item())
+        print("\nLoss: %20.15f" % loss.item())
         # Ensure X is created correclty
         assert self.X.shape == torch.Size([4, 3, 3, 3])
 
@@ -102,17 +100,19 @@ class TestObjectiveFunc:
 
         # Check if gradient and backward exist
         assert hasattr(loss, 'grad_fn')
-        assert hasattr(loss, 'backward')
 
         # Check if gradient and backward are callable
-        # assert callable(loss.backward())
         assert callable(loss.grad_fn)
+
+        # check backward
+        loss.backward()
 
         # Confirm the gradient
         assert loss.grad_fn != None
 
         # Confirm the Output
-        assert 1.74<loss.item()<1.7401
+        # Float Precision Issues This was the quick fix
+        assert 1.7400<loss.item()<1.7401
 
 
 
